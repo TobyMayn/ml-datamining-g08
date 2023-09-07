@@ -67,7 +67,7 @@ for k in range(2):
     for c in range(C):
         plt.plot(Z[y==c,i], Z[y==c,j], '.', alpha=.5)
     plt.xlabel('PC'+str(i+1))
-    plt.xlabel('PC'+str(j+1))
+    plt.ylabel('PC'+str(j+1))
     plt.title(titles[k] + '\n' + 'Projection' )
     plt.legend(classNames)
     plt.axis('equal')

@@ -1,15 +1,15 @@
 import matplotlib.pyplot as plt
-from scipy.linalg import svd
-
 from helper.loadFile import *
+from scipy.linalg import svd
 
 # Subtract mean value from data
 Y = X - np.ones((N,1))*X.mean(axis=0)
+Y = Y*(1/np.std(Y,0))
+
 
 # PCA by computing SVD of Y
 U,S,V = svd(Y,full_matrices=False)
 
-# Compute variance explained by principal components
 rho = (S*S) / (S*S).sum() 
 
 threshold = 0.9

@@ -2,6 +2,10 @@ import matplotlib.pyplot as plt
 from helper.loadFile import *
 from scipy.linalg import svd
 
+####################################
+# VISUALIZE COMPONENT COEFFICIENTS #
+####################################
+
 # Subtract mean value from data
 Y = X - np.ones((N,1))*X.mean(axis=0)
 Y = Y*(1/np.std(Y,0))

@@ -32,4 +32,6 @@ print(N)
 M = len(attributeNames)
 C = len(classNames)
 
+print(classNames)
+
 print("loaded file correctly")

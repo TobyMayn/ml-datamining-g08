@@ -22,7 +22,6 @@ r = np.arange(1,X.shape[1]+1)
 # Use X_s instead of X to in the script below to see the difference.
 # Does it affect the two columns in the plot equally?
 
-
 # Subtract the mean from the data
 Y1 = X - np.ones((N, 1))*X.mean(0)
 
@@ -68,8 +67,8 @@ for x in range(9):
     plt.subplot(nrows, ncols, x+k)
     C = len(classNames)
     for c in range(C):
-        plt.plot(Z[y==c,i], Z[y==c,j+x], '.', alpha=.5)
-    plt.xlabel('PC'+str(i+1))
+        plt.plot(Z[y==c,i+x], Z[y==c,j+x], '.', alpha=.5)
+    plt.xlabel('PC'+str(i+1+x))
     plt.ylabel('PC'+str(j+1+x))
     #plt.title(titles[k] + '\n' + 'Projection' )
     plt.legend(classNames)

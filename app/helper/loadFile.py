@@ -14,7 +14,7 @@ classLabelsInt = [int(num) for num in classLabels]
 classNames = sorted(set([0, 1]))#[str(int(num)) for num in classLabels] sorted(set(classLabels))
 classDict = dict(zip(classNames, range(2)))
 
-binaryDict = dict(zip(['Present', 'Absent'], range(2)))
+binaryDict = dict(zip(['Absent', 'Present'], range(2)))
 
 # Extract vector y, convert to NumPy array
 y = np.asarray([classDict[value] for value in classLabelsInt])
